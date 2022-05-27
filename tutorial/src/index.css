@@ -1,8 +1,13 @@
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
   }
   
+  :root{
+    --gameBoardBackgroundColor: #ffffff;
+    --gameBoardColor: #ffffff;
+    --buttonColor: #ffffff;
+  }
+
   ol, ul {
     padding-left: 30px;
   }
@@ -14,24 +19,56 @@ body {
   }
   
   .status {
-    margin-bottom: 10px;
+    margin:20px;
+    border-radius: 30px;
+    border: 2px solid #aaa;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    background-color: var(--buttonColor);
+    font-size: 50px;
   }
   
   .square {
-    background: #fff;
-    border: 1px solid #999;
+    border: 2px solid #aaa;
+    background: var(--gameBoardColor);
+    color:rgb(255, 0, 0);
     float: left;
-    font-size: 24px;
+    font-size: 180px;
     font-weight: bold;
-    line-height: 34px;
-    height: 34px;
+    line-height: 180px;
+    height: 180px;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 34px;
+    width: 180px;
   }
-  
+  .square:hover{
+    opacity: 0.8;
+  }
+  .resetButtonRow{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height:100px;
+  }
+
+  .resetButton{
+    background-color: var(--buttonColor);
+    color: black;
+    font-size: 20px;
+    padding: 10px 60px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .resetButton:hover {
+    opacity: 0.8;
+}
   .square:focus {
     outline: none;
   }
@@ -43,9 +80,32 @@ body {
   .game {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    min-width:800px;
+    min-height: 800px;
   }
   
   .game-info {
     margin-left: 20px;
   }
-  
+  .game-board{
+    display:flex;
+    flex-direction: column;
+    border-radius: 30px;
+    background-color: var(--gameBoardBackgroundColor);
+  }
+  .themeSelector{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    height:50x;
+  }
+  .formControl{
+    display:flex;
+    justify-content: right;
+  }
+  .innerBoard{
+    margin:0 20px 0 20px;
+  }
