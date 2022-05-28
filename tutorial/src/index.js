@@ -75,7 +75,7 @@ class Board extends React.Component {
       colors: ["#26547C", "#EF476F", "#FFD166", "#06D6A0", "#FCFCFC"],
       calc: (props, i) => ({
         ...props,
-        x: 100 + i * (window.innerWidth / 5) - (i + 3),
+        x: (window.innerWidth / 5) * (i - 1) - window.innerWidth / 10,
         y: 250 + Math.random() * 400 - 50 + (i === 2 ? -10 : 0),
       }),
     };
@@ -185,7 +185,7 @@ class Game extends React.Component {
             <FormControl className="formControl">
               <RadioGroup
                 aria-labelledby="demo-radio-buttons-group-label"
-                defaultValue="theme1"
+                defaultValue={0}
                 name="radio-buttons-group"
                 row
                 onChange={(e) => this.updateTheme(e.target.value)}
