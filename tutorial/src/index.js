@@ -176,7 +176,6 @@ class Game extends React.Component {
   }
 
   render() {
-    console.log("render");
     return (
       <div className="game">
         <div className="game-board">
