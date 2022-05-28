@@ -1,8 +1,7 @@
-import React, { useRef } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import {
   FormControl,
-  FormLabel,
   RadioGroup,
   Radio,
   FormControlLabel,
